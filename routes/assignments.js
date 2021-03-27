@@ -53,7 +53,11 @@ function postAssignment(req, res) {
   assignment.nom = req.body.nom;
   assignment.dateDeRendu = req.body.dateDeRendu;
   assignment.rendu = req.body.rendu;
+  assignment.auteur = req.body.auteur;
+  assignment.note = Number(req.body.note);
+  assignment.remarques = req.body.remarques;
 
+  console.log(req.body);
   console.log("POST assignment reçu :");
   console.log(assignment);
 
@@ -78,7 +82,7 @@ function updateAssignment(req, res) {
         console.log(err);
         res.send(err);
       } else {
-        res.json({ message: "updated" });
+        res.json({ message: "updated -ok " });
       }
 
       // console.log('updated ', assignment)
