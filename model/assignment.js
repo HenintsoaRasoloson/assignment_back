@@ -11,6 +11,13 @@ let AssignmentSchema = Schema({
     auteur: String,
     note : Number,
     remarques : String,
+    matiere : {
+        _id : Number,
+        id : Number,
+        nom : String,
+        image_matiere : String,
+        image_prof : String
+    },
 });
 
 AssignmentSchema.plugin(aggregatePaginate);
